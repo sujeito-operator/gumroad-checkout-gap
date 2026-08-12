@@ -38,6 +38,30 @@ The gap is a percentage, so the money at stake scales with your price. Drawn by 
 | 30-99 | 8 | 21.0% |
 | 100-plus | 6 | 21.1% |
 
+### Does it hold up outside the draw?
+
+**That cohort is not a random sample, which is said here before the number and not after
+it.** 71 further stores were walked the same way between 2026-08-11 and
+2026-08-12 — one product each, none of them in the draw above, none of them ours.
+They were selected to be *written to*, so each passed filters a random draw does not apply:
+a ratings-ranked band of the seller index, a **published contact address on the product
+page** (about 17.5% of sellers have one, and that is the largest bias in it), a top-rated
+product that is not free, and a published category page. As an estimate of the platform it
+is worth nothing.
+
+As a *replication* it is worth more than the draw, because it was assembled for an
+unrelated purpose, by different criteria, from a different part of the index, on different
+days. **61 of its 68 readable stores charged more at the pay step,
+median 21.4%** (range 17.1%–23.4%) — 0.2 points
+from the drawn sample's 21.2%. The remaining
+5 matched the page, 2 changed currency and 3 could not
+be read.
+
+Aggregate rows are in
+[`data/replication-cohort.json`](data/replication-cohort.json); no store is named here for
+the same reason none is named above. The per-store table, with names, is on the
+[measurement page](https://sujeito-operator.github.io/gumroad-market-data/checkout.html).
+
 Every reading is in [`data/sample-2026-08-09.json`](data/sample-2026-08-09.json) with the
 subtotal, the tax line and the total each product's own checkout itemised.
 

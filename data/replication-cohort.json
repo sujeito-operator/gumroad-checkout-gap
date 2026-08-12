@@ -1,0 +1,665 @@
+{
+ "summary": {
+  "cohort": "non-random replication",
+  "stores": 71,
+  "read": 68,
+  "higher": 61,
+  "agree": 5,
+  "lower": 0,
+  "currency": 2,
+  "unread": 3,
+  "median_pct": 21.4,
+  "min_pct": 17.1,
+  "max_pct": 23.4,
+  "walked_from": "2026-08-11",
+  "walked_to": "2026-08-12",
+  "dropped": {
+   "an earlier or second reading of a store already counted": 32,
+   "our own store": 1,
+   "already in the published random sample": 1
+  },
+  "selection": "Not a random sample. These stores were assembled to be written to, so each one passed filters a random draw does not apply: it sits in a ratings-ranked band of the seller index, it publishes a contact address on its product page (about 17.5% of sellers do), its top-rated product is not free, and it has a published category page. Reported as a replication of the random sample, never as an estimate of the platform.",
+  "method": "Identical to the sample: two page loads per store from London, GB — the product page, then the gumroad.com/checkout URL its own buy control carries. No order completed, no form submitted, no account touched. One product per store, the most recent reading where a store was walked more than once."
+ },
+ "rows": [
+  {
+   "bucket": "higher",
+   "delta_pct": 23.4,
+   "why": null,
+   "page": "£10.37",
+   "tax": "£2.10",
+   "tax_label": "VAT",
+   "total": "£12.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 23.0,
+   "why": null,
+   "page": "£12.82",
+   "tax": "£2.59",
+   "tax_label": "VAT",
+   "total": "£15.77"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 22.8,
+   "why": null,
+   "page": "£58.48",
+   "tax": "£11.95",
+   "tax_label": "VAT",
+   "total": "£71.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 22.7,
+   "why": null,
+   "page": "£17.77",
+   "tax": "£3.59",
+   "tax_label": "VAT",
+   "total": "£21.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 22.7,
+   "why": null,
+   "page": "£17.77",
+   "tax": "£3.59",
+   "tax_label": "VAT",
+   "total": "£21.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 22.7,
+   "why": null,
+   "page": "£35.54",
+   "tax": "£7.19",
+   "tax_label": "VAT",
+   "total": "£43.60"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 22.1,
+   "why": null,
+   "page": "£19.99",
+   "tax": "£4.04",
+   "tax_label": "VAT",
+   "total": "£24.40"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.9,
+   "why": null,
+   "page": "£57.26",
+   "tax": "£11.58",
+   "tax_label": "VAT",
+   "total": "£69.82"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.9,
+   "why": null,
+   "page": "£54.78",
+   "tax": "£11.08",
+   "tax_label": "VAT",
+   "total": "£66.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.6,
+   "why": null,
+   "page": "£22.21",
+   "tax": "£4.49",
+   "tax_label": "VAT",
+   "total": "£27.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.6,
+   "why": null,
+   "page": "£44.42",
+   "tax": "£8.98",
+   "tax_label": "VAT",
+   "total": "£54.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.6,
+   "why": null,
+   "page": "£37.02",
+   "tax": "£7.49",
+   "tax_label": "VAT",
+   "total": "£45.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.6,
+   "why": null,
+   "page": "£51.82",
+   "tax": "£10.48",
+   "tax_label": "VAT",
+   "total": "£63.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.6,
+   "why": null,
+   "page": "£29.60",
+   "tax": "£5.99",
+   "tax_label": "VAT",
+   "total": "£36.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.6,
+   "why": null,
+   "page": "£22.21",
+   "tax": "£4.49",
+   "tax_label": "VAT",
+   "total": "£27.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.6,
+   "why": null,
+   "page": "£22.21",
+   "tax": "£4.49",
+   "tax_label": "VAT",
+   "total": "£27.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.6,
+   "why": null,
+   "page": "£29.61",
+   "tax": "£5.99",
+   "tax_label": "VAT",
+   "total": "£36.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.6,
+   "why": null,
+   "page": "£22.21",
+   "tax": "£4.49",
+   "tax_label": "VAT",
+   "total": "£27.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.6,
+   "why": null,
+   "page": "£14.80",
+   "tax": "£2.99",
+   "tax_label": "VAT",
+   "total": "£18.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.6,
+   "why": null,
+   "page": "£37.01",
+   "tax": "£7.48",
+   "tax_label": "VAT",
+   "total": "£44.99"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.6,
+   "why": null,
+   "page": "£44.41",
+   "tax": "£8.98",
+   "tax_label": "VAT",
+   "total": "£53.99"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.6,
+   "why": null,
+   "page": "£110.99",
+   "tax": "£22.45",
+   "tax_label": "VAT",
+   "total": "£135.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.6,
+   "why": null,
+   "page": "£29.61",
+   "tax": "£5.99",
+   "tax_label": "VAT",
+   "total": "£36.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.5,
+   "why": null,
+   "page": "£17.22",
+   "tax": "£3.48",
+   "tax_label": "VAT",
+   "total": "£20.92"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.5,
+   "why": null,
+   "page": "£148.11",
+   "tax": "£29.95",
+   "tax_label": "VAT",
+   "total": "£180.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.5,
+   "why": null,
+   "page": "£51.84",
+   "tax": "£10.48",
+   "tax_label": "VAT",
+   "total": "£63.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.5,
+   "why": null,
+   "page": "£14.81",
+   "tax": "£2.99",
+   "tax_label": "VAT",
+   "total": "£18.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.5,
+   "why": null,
+   "page": "£22.21",
+   "tax": "£4.49",
+   "tax_label": "VAT",
+   "total": "£26.99"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.4,
+   "why": null,
+   "page": "£3.70",
+   "tax": "£0.75",
+   "tax_label": "VAT",
+   "total": "£4.49"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.4,
+   "why": null,
+   "page": "£110.25",
+   "tax": "£22.30",
+   "tax_label": "VAT",
+   "total": "£133.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.4,
+   "why": null,
+   "page": "£14.73",
+   "tax": "£2.98",
+   "tax_label": "VAT",
+   "total": "£17.88"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.2,
+   "why": null,
+   "page": "£17.08",
+   "tax": "£3.46",
+   "tax_label": "VAT",
+   "total": "£20.70"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 21.2,
+   "why": null,
+   "page": "£17.09",
+   "tax": "£3.46",
+   "tax_label": "VAT",
+   "total": "£20.71"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.9,
+   "why": null,
+   "page": "£43.68",
+   "tax": "£8.83",
+   "tax_label": "VAT",
+   "total": "£52.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.9,
+   "why": null,
+   "page": "£51.10",
+   "tax": "£10.33",
+   "tax_label": "VAT",
+   "total": "£61.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.8,
+   "why": null,
+   "page": "£62.93",
+   "tax": "£12.72",
+   "tax_label": "VAT",
+   "total": "£76.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.8,
+   "why": null,
+   "page": "£36.27",
+   "tax": "£7.34",
+   "tax_label": "VAT",
+   "total": "£43.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.8,
+   "why": null,
+   "page": "£36.27",
+   "tax": "£7.33",
+   "tax_label": "VAT",
+   "total": "£43.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.8,
+   "why": null,
+   "page": "£70.34",
+   "tax": "£14.22",
+   "tax_label": "VAT",
+   "total": "£85.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.8,
+   "why": null,
+   "page": "£36.27",
+   "tax": "£7.34",
+   "tax_label": "VAT",
+   "total": "£43.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.7,
+   "why": null,
+   "page": "£36.29",
+   "tax": "£7.34",
+   "tax_label": "VAT",
+   "total": "£43.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.5,
+   "why": null,
+   "page": "£28.88",
+   "tax": "£5.84",
+   "tax_label": "VAT",
+   "total": "£34.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.5,
+   "why": null,
+   "page": "£28.87",
+   "tax": "£5.84",
+   "tax_label": "VAT",
+   "total": "£34.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.5,
+   "why": null,
+   "page": "£28.88",
+   "tax": "£5.84",
+   "tax_label": "VAT",
+   "total": "£34.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.2,
+   "why": null,
+   "page": "£21.47",
+   "tax": "£4.34",
+   "tax_label": "VAT",
+   "total": "£25.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.1,
+   "why": null,
+   "page": "£33.30",
+   "tax": "£6.73",
+   "tax_label": "VAT",
+   "total": "£40.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.0,
+   "why": null,
+   "page": "$24",
+   "tax": "$4.80",
+   "tax_label": "VAT",
+   "total": "$28.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.0,
+   "why": null,
+   "page": "$20",
+   "tax": "$4",
+   "tax_label": "VAT",
+   "total": "$24"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.0,
+   "why": null,
+   "page": "$79",
+   "tax": "$15.80",
+   "tax_label": "VAT",
+   "total": "$94.80"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 20.0,
+   "why": null,
+   "page": "£21.36",
+   "tax": "£4.32",
+   "tax_label": "VAT",
+   "total": "£25.63"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 19.9,
+   "why": null,
+   "page": "£23.69",
+   "tax": "£4.79",
+   "tax_label": "VAT",
+   "total": "£28.40"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 19.9,
+   "why": null,
+   "page": "£11.84",
+   "tax": "£2.39",
+   "tax_label": "VAT",
+   "total": "£14.20"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 19.9,
+   "why": null,
+   "page": "£11.84",
+   "tax": "£2.39",
+   "tax_label": "VAT",
+   "total": "£14.20"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 19.6,
+   "why": null,
+   "page": "£25.92",
+   "tax": "£5.24",
+   "tax_label": "VAT",
+   "total": "£31.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 19.6,
+   "why": null,
+   "page": "£25.91",
+   "tax": "£5.24",
+   "tax_label": "VAT",
+   "total": "£31.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 19.5,
+   "why": null,
+   "page": "£18.79",
+   "tax": "£3.80",
+   "tax_label": "VAT",
+   "total": "£22.46"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 18.9,
+   "why": null,
+   "page": "£18.50",
+   "tax": "£3.74",
+   "tax_label": "VAT",
+   "total": "£21.99"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 18.9,
+   "why": null,
+   "page": "£18.50",
+   "tax": "£3.74",
+   "tax_label": "VAT",
+   "total": "£22.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 18.9,
+   "why": null,
+   "page": "£18.50",
+   "tax": "£3.74",
+   "tax_label": "VAT",
+   "total": "£22.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 18.9,
+   "why": null,
+   "page": "£18.50",
+   "tax": "£3.74",
+   "tax_label": "VAT",
+   "total": "£22.00"
+  },
+  {
+   "bucket": "higher",
+   "delta_pct": 17.1,
+   "why": null,
+   "page": "£11.10",
+   "tax": "£2.24",
+   "tax_label": "VAT",
+   "total": "£13.00"
+  },
+  {
+   "bucket": "agree",
+   "delta_pct": 1.4,
+   "why": null,
+   "page": "£1.48",
+   "tax": null,
+   "tax_label": null,
+   "total": "£1.50"
+  },
+  {
+   "bucket": "agree",
+   "delta_pct": 1.0,
+   "why": null,
+   "page": "£73.29",
+   "tax": null,
+   "tax_label": null,
+   "total": "£74.00"
+  },
+  {
+   "bucket": "agree",
+   "delta_pct": 0.0,
+   "why": null,
+   "page": "€20",
+   "tax": null,
+   "tax_label": null,
+   "total": "€20.00"
+  },
+  {
+   "bucket": "agree",
+   "delta_pct": 0.0,
+   "why": null,
+   "page": "£17.09",
+   "tax": null,
+   "tax_label": null,
+   "total": "£17.09"
+  },
+  {
+   "bucket": "agree",
+   "delta_pct": 0.0,
+   "why": null,
+   "page": "$49",
+   "tax": null,
+   "tax_label": null,
+   "total": "$49"
+  },
+  {
+   "bucket": "currency",
+   "delta_pct": null,
+   "why": null,
+   "page": "$72",
+   "tax": "£14.82",
+   "tax_label": "VAT",
+   "total": "£88.80"
+  },
+  {
+   "bucket": "currency",
+   "delta_pct": null,
+   "why": null,
+   "page": "£25",
+   "tax": "$6.75",
+   "tax_label": "VAT",
+   "total": "$40.51"
+  },
+  {
+   "bucket": "unread",
+   "delta_pct": null,
+   "why": "the page prices in EUR and the pay step charges $33.24; no page figure is in the pay step's currency, so no gap is quoted",
+   "page": null,
+   "tax": "$5.54",
+   "tax_label": "VAT",
+   "total": "$33.24"
+  },
+  {
+   "bucket": "unread",
+   "delta_pct": null,
+   "why": "the product is free",
+   "page": "£0.00",
+   "tax": null,
+   "tax_label": null,
+   "total": "$0"
+  },
+  {
+   "bucket": "unread",
+   "delta_pct": null,
+   "why": "no buy control found",
+   "page": null,
+   "tax": null,
+   "tax_label": null,
+   "total": null
+  }
+ ]
+}
