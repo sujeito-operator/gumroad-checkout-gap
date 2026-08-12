@@ -162,25 +162,54 @@ def classify(page_price, checkout, repeated=()):
     return "tax_on_top", round(delta, 1), (
         f"page shows {page_price[2]}, pay step totals {total[2]}")
 
+SETTLE_TRIES = 8
+SETTLE_MS = 1500
+
+
+def settle(read, done, tries=SETTLE_TRIES, pause=None):
+    """Call `read()` until `done(value)`, or `tries` runs out. -> the last value read.
+
+    A FIXED SLEEP IS A GUESS ABOUT SOMEBODY ELSE'S CONNECTION. The first published
+    version waited 3.5s on the product page and 7s on the checkout, and both figures
+    are rendered client-side. Measured on the box that built it, one run in three came
+    back `none` against a product that was working perfectly. A seller who gets `none`
+    on their own live product concludes this tool is broken, and they are not wrong to.
+
+    Polling costs nothing when the page is quick -- the first read returns and the loop
+    exits -- and it is the difference between a reading and a shrug when it is slow.
+    """
+    val = None
+    for _ in range(tries):
+        val = read()
+        if done(val):
+            return val
+        if pause:
+            pause(SETTLE_MS)
+    return val
+
+
+def repeated_money(body):
+    """Amounts a visitor sees at least twice, sorted.
+
+    The price is only trusted when the same amount appears twice -- Gumroad renders it
+    in the header and again at the buy control. A single occurrence is prose. WHICH
+    repeated amount is the price is decided later, against the checkout, not here.
+    """
+    counts = {}
+    for iso, amt, raw in money(body):
+        counts.setdefault((iso, amt, raw), 0)
+        counts[(iso, amt, raw)] += 1
+    return sorted((k for k, n in counts.items() if n >= 2), key=lambda k: (k[0], k[1]))
+
 
 def walk(pg, url):
     """One product: page figures, the checkout the page links to, and the verdict."""
     rec = {"url": url}
     pg.goto(url, timeout=60000, wait_until="domcontentloaded")
-    pg.wait_for_timeout(3500)
-    body = pg.inner_text("body")
+    repeated = settle(lambda: repeated_money(pg.inner_text("body")), bool,
+                      pause=pg.wait_for_timeout)
     rec["title"] = (pg.title() or "")[:140]
-
-    # The price a visitor sees is only trusted when the same amount appears at least
-    # twice -- Gumroad renders it in the header and again at the buy control. A single
-    # occurrence is prose. WHICH repeated amount is the price is decided later, against
-    # the checkout, not here.
-    counts = {}
-    for iso, amt, raw in money(body):
-        counts.setdefault((iso, amt, raw), 0)
-        counts[(iso, amt, raw)] += 1
-    repeated = [k for k, n in counts.items() if n >= 2]
-    rec["page_repeated"] = [list(k) for k in sorted(repeated, key=lambda k: (k[0], k[1]))]
+    rec["page_repeated"] = [list(k) for k in repeated]
 
     a = pg.query_selector("a[href*='gumroad.com/checkout']")
     href = a.get_attribute("href") if a else None
@@ -191,8 +220,8 @@ def walk(pg, url):
         return rec
 
     pg.goto(href, timeout=60000, wait_until="domcontentloaded")
-    pg.wait_for_timeout(7000)
-    parsed = parse_checkout(pg.inner_text("body"))
+    parsed = settle(lambda: parse_checkout(pg.inner_text("body")),
+                    lambda p: bool(p.get("total")), pause=pg.wait_for_timeout)
     rec["checkout_url"] = pg.url
     rec["checkout"] = {k: (list(v) if isinstance(v, tuple) else v)
                        for k, v in parsed.items()}
@@ -219,6 +248,45 @@ def report(rec):
         out.append(f"  the buyer pays         {ck['total'][2]}{tail}")
     out += ["", f"  verdict: {rec['verdict']} -- {rec['why']}"]
     return "\n".join(out)
+
+
+FINDINGS = ("tax_on_top", "currency")
+
+
+def offer(recs):
+    """The closing block, or "" when this run found nothing.
+
+    CONDITIONAL ON PURPOSE. Under a clean reading this is an advertisement and it does
+    not print. Under the reader's own finding it is the answer to the question the
+    finding raises -- and the free fix is named before the paid one, because the free
+    fix is the one that actually helps most sellers.
+    """
+    hits = [r for r in recs if r.get("verdict") in FINDINGS]
+    read = [r for r in recs if r.get("verdict") != "error"]
+    if not hits:
+        return ""
+    n, of = len(hits), len(read)
+    return "\n".join([
+        "-" * 72,
+        f"{n} of {of} product(s) read here cost the buyer more at the pay step than the",
+        "page advertised.",
+        "",
+        "Nobody did anything wrong. Gumroad is the merchant of record; for a buyer in a",
+        "VAT country it collects the tax on top of the listed price and remits it. No",
+        "setting in your account switches that off, and my own product does the same",
+        "thing. The only thing you control is whether the page says so -- one line in",
+        "the description, which costs nothing and is what I did on mine.",
+        "",
+        "You can point this script at the rest of your URLs right now and read them all",
+        "yourself. It takes as many as you give it, it is MIT, and it is the same code.",
+        "",
+        "If you would rather have the whole storefront walked and sent back as one table",
+        "-- page figure, subtotal, tax line, total and gap on every product -- that is",
+        "the one thing here that costs money:",
+        "",
+        "  https://sujeitooperator.gumroad.com/l/xlvfeb?referrer=https://tool-cg.click.sujeito.org/",
+        "",
+    ])
 
 
 def selftest():
@@ -261,6 +329,30 @@ def selftest():
     v, _, _ = classify(None, {"total": ("USD", 33.24, "$33.24")}, [])
     eq(v, "none", "silence with nothing read says nothing")
 
+    seq = iter([[], [], ["found"]])
+    waits = []
+    eq(settle(lambda: next(seq), bool, pause=waits.append), ["found"], "settle waits")
+    eq(waits, [SETTLE_MS, SETTLE_MS], "and paused between reads, twice")
+    eq(settle(lambda: ["now"], bool, pause=waits.append), ["now"], "a quick page waits 0")
+    eq(len(waits), 2, "no extra pause once it is done")
+    eq(settle(lambda: [], bool, tries=3, pause=lambda _: None), [],
+       "a page that never settles gives up and returns what it saw")
+
+    eq(repeated_money("£9 £9 £4"), [("GBP", 9.0, "£9")], "twice is a price")
+    eq(repeated_money("£9 £4"), [], "once is prose")
+
+    eq(offer([{"verdict": "none"}]), "", "a clean reading is not pitched at")
+    eq(offer([{"verdict": "error"}]), "", "a failed reading is not pitched at")
+    eq(offer([]), "", "nothing read, nothing said")
+    eq("costs money" in offer([{"verdict": "tax_on_top"}]), True, "a finding asks")
+    eq("costs money" in offer([{"verdict": "currency"}]), True, "so does a currency switch")
+    eq(offer([{"verdict": "tax_on_top"}, {"verdict": "none"}]).splitlines()[1][:6],
+       "1 of 2", "the count is of what was read")
+    eq(offer([{"verdict": "tax_on_top"}, {"verdict": "error"}]).splitlines()[1][:6],
+       "1 of 1", "and an error was not read")
+    eq(re.search(r"[$£€]\s?\d", offer([{"verdict": "tax_on_top"}])), None,
+       "no price is typed in the offer -- the page renders it")
+
     print(f"selftest OK ({ok} checks)")
     return 0
 
@@ -272,6 +364,8 @@ def main():
     ap.add_argument("--country", default="GB", help="informational; the reading is from "
                     "wherever this machine is. Run it from the market you sell to.")
     ap.add_argument("--selftest", action="store_true")
+    ap.add_argument("--no-offer", action="store_true", help="readings only; suppress the "
+                    "closing block that says what can be done about a finding")
     a = ap.parse_args()
     if a.selftest:
         return selftest()
@@ -302,6 +396,10 @@ def main():
         with open(a.json, "w") as fh:
             json.dump(recs, fh, indent=1, default=list)
         print(f"wrote {a.json}")
+    if not a.no_offer:
+        block = offer(recs)
+        if block:
+            print(block)
     return 0
 
 

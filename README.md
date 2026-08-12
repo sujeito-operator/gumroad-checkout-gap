@@ -61,6 +61,11 @@ answer, which is the one you can already see.
 It loads two public pages and stops. It completes no order, submits no form, types no
 email or card into a checkout, and touches no account.
 
+Give it as many product URLs as you like and it reads them all. When a run turns up a
+gap it closes by saying what can be done about one — including the paid thing at the
+bottom of this page, so you know that up front. `--no-offer` turns that off. Under a
+clean reading it says nothing, because there would be nothing to say.
+
 ## What it will not tell you
 
 The reading **refuses rather than guesses**. A page figure is only quoted when the
@@ -104,7 +109,7 @@ This measures one product. If you want every product on your storefront walked a
 itemised the same way — page figure, subtotal, tax line, total, and the gap on each —
 that is what I sell:
 
-**[Storefront checkout audit →](https://sujeitooperator.gumroad.com/l/xlvfeb)** (price on the page)
+**[Storefront checkout audit →](https://sujeitooperator.gumroad.com/l/xlvfeb?referrer=https://readme-cg.click.sujeito.org/)** (price on the page)
 
 Also free, no email required: **[Gumroad Market Data](https://github.com/sujeito-operator/gumroad-market-data)** — 8,311 products
 across 4,532 sellers, with real unit sales for the ones that expose them.
