@@ -1,0 +1,345 @@
+{
+ "walked_at": "2026-08-09",
+ "frame": {
+  "sellers": 4255,
+  "excluded_no_paid_price": 290,
+  "source": "https://github.com/sujeito-operator/gumroad-market-data",
+  "seed": 20260809,
+  "n": 32,
+  "stratified_by": "seller median listed price, 4 bands, equal draw"
+ },
+ "read_from": "London, GB, logged out",
+ "walked": 32,
+ "read": 31,
+ "counts": {
+  "higher_at_checkout": 27,
+  "agree": 1,
+  "lower_at_checkout": 1,
+  "currency": 2,
+  "unread": 1
+ },
+ "unread_reasons": {
+  "the product is free": 1
+ },
+ "gap_pct": {
+  "n": 27,
+  "min": 16.6,
+  "median": 21.2,
+  "max": 27.9
+ },
+ "tax_label_seen": [
+  "VAT"
+ ],
+ "rows": [
+  {
+   "band": "under-10",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 27.9,
+   "page": "\u00a35.94",
+   "subtotal": "\u00a36.40",
+   "tax": "\u00a31.20",
+   "tax_label": "VAT",
+   "total": "\u00a37.60"
+  },
+  {
+   "band": "under-10",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.6,
+   "page": "\u00a30.74",
+   "subtotal": "\u00a30.75",
+   "tax": "\u00a30.15",
+   "tax_label": "VAT",
+   "total": "\u00a30.90"
+  },
+  {
+   "band": "under-10",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.2,
+   "page": "\u00a37.42",
+   "subtotal": "\u00a37.49",
+   "tax": "\u00a31.50",
+   "tax_label": "VAT",
+   "total": "\u00a38.99"
+  },
+  {
+   "band": "under-10",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.3,
+   "page": "\u00a33.71",
+   "subtotal": "\u00a33.75",
+   "tax": "\u00a30.75",
+   "tax_label": "VAT",
+   "total": "\u00a34.50"
+  },
+  {
+   "band": "under-10",
+   "bucket": "lower_at_checkout",
+   "delta_pct": -14.0,
+   "page": "$5",
+   "subtotal": "$3.58",
+   "tax": "$0.72",
+   "tax_label": "VAT",
+   "total": "$4.30"
+  },
+  {
+   "band": "under-10",
+   "bucket": "agree",
+   "delta_pct": 0.9,
+   "page": "\u00a32.23",
+   "subtotal": "\u00a32.25",
+   "tax": null,
+   "tax_label": null,
+   "total": "\u00a32.25"
+  },
+  {
+   "band": "under-10",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 16.6,
+   "page": "\u00a32.23",
+   "subtotal": "\u00a32.15",
+   "tax": "\u00a30.45",
+   "tax_label": "VAT",
+   "total": "\u00a32.60"
+  },
+  {
+   "band": "under-10",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.2,
+   "page": "\u00a344.55",
+   "subtotal": "\u00a345.00",
+   "tax": "\u00a38.99",
+   "tax_label": "VAT",
+   "total": "\u00a353.99"
+  },
+  {
+   "band": "10-29",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 16.7,
+   "page": "\u00a311.14",
+   "subtotal": "\u00a310.75",
+   "tax": "\u00a32.25",
+   "tax_label": "VAT",
+   "total": "\u00a313.00"
+  },
+  {
+   "band": "10-29",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 16.7,
+   "page": "\u00a311.14",
+   "subtotal": "\u00a310.75",
+   "tax": "\u00a32.25",
+   "tax_label": "VAT",
+   "total": "\u00a313.00"
+  },
+  {
+   "band": "10-29",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.2,
+   "page": "\u00a314.84",
+   "subtotal": "\u00a314.99",
+   "tax": "\u00a33.00",
+   "tax_label": "VAT",
+   "total": "\u00a317.99"
+  },
+  {
+   "band": "10-29",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 16.7,
+   "page": "\u00a38.91",
+   "subtotal": "\u00a38.60",
+   "tax": "\u00a31.80",
+   "tax_label": "VAT",
+   "total": "\u00a310.40"
+  },
+  {
+   "band": "10-29",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 23.1,
+   "page": "\u00a320.79",
+   "subtotal": "\u00a321.40",
+   "tax": "\u00a34.20",
+   "tax_label": "VAT",
+   "total": "\u00a325.60"
+  },
+  {
+   "band": "10-29",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.2,
+   "page": "\u00a314.85",
+   "subtotal": "\u00a315.00",
+   "tax": "\u00a33.00",
+   "tax_label": "VAT",
+   "total": "\u00a318.00"
+  },
+  {
+   "band": "10-29",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 23.5,
+   "page": "\u00a315.74",
+   "subtotal": "\u00a316.26",
+   "tax": "\u00a33.18",
+   "tax_label": "VAT",
+   "total": "\u00a319.44"
+  },
+  {
+   "band": "30-99",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 20.8,
+   "page": "\u00a373.52",
+   "subtotal": "\u00a373.96",
+   "tax": "\u00a314.84",
+   "tax_label": "VAT",
+   "total": "\u00a388.80"
+  },
+  {
+   "band": "30-99",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 20.4,
+   "page": "\u00a336.39",
+   "subtotal": "\u00a336.46",
+   "tax": "\u00a37.34",
+   "tax_label": "VAT",
+   "total": "\u00a343.80"
+  },
+  {
+   "band": "30-99",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.3,
+   "page": "\u00a372.03",
+   "subtotal": "\u00a372.86",
+   "tax": "\u00a314.54",
+   "tax_label": "VAT",
+   "total": "\u00a387.40"
+  },
+  {
+   "band": "30-99",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 20.6,
+   "page": "\u00a351.24",
+   "subtotal": "\u00a351.46",
+   "tax": "\u00a310.34",
+   "tax_label": "VAT",
+   "total": "\u00a361.80"
+  },
+  {
+   "band": "30-99",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.7,
+   "page": "\u00a360.07",
+   "subtotal": "\u00a360.95",
+   "tax": "\u00a312.13",
+   "tax_label": "VAT",
+   "total": "\u00a373.08"
+  },
+  {
+   "band": "30-99",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.2,
+   "page": "\u00a329.70",
+   "subtotal": "\u00a329.99",
+   "tax": "\u00a36.00",
+   "tax_label": "VAT",
+   "total": "\u00a335.99"
+  },
+  {
+   "band": "30-99",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.2,
+   "page": "\u00a322.27",
+   "subtotal": "\u00a322.49",
+   "tax": "\u00a34.50",
+   "tax_label": "VAT",
+   "total": "\u00a326.99"
+  },
+  {
+   "band": "30-99",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 20.4,
+   "page": "\u00a336.39",
+   "subtotal": "\u00a336.46",
+   "tax": "\u00a37.34",
+   "tax_label": "VAT",
+   "total": "\u00a343.80"
+  },
+  {
+   "band": "100-plus",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 20.9,
+   "page": "\u00a395.79",
+   "subtotal": "\u00a396.46",
+   "tax": "\u00a319.34",
+   "tax_label": "VAT",
+   "total": "\u00a3115.80"
+  },
+  {
+   "band": "100-plus",
+   "bucket": "currency",
+   "delta_pct": null,
+   "page": "\u00a399",
+   "subtotal": "$133.32",
+   "tax": null,
+   "tax_label": null,
+   "total": "$133.32"
+  },
+  {
+   "band": "100-plus",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.0,
+   "page": "\u00a3147.77",
+   "subtotal": "\u00a3148.97",
+   "tax": "\u00a329.83",
+   "tax_label": "VAT",
+   "total": "\u00a3178.80"
+  },
+  {
+   "band": "100-plus",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.2,
+   "page": "\u00a3259.90",
+   "subtotal": "\u00a3262.54",
+   "tax": "\u00a352.46",
+   "tax_label": "VAT",
+   "total": "\u00a3315.00"
+  },
+  {
+   "band": "100-plus",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.1,
+   "page": "\u00a3259.16",
+   "subtotal": "\u00a3261.49",
+   "tax": "\u00a352.31",
+   "tax_label": "VAT",
+   "total": "\u00a3313.80"
+  },
+  {
+   "band": "100-plus",
+   "bucket": "currency",
+   "delta_pct": null,
+   "page": "$250",
+   "subtotal": "\u00a3372.90",
+   "tax": "\u00a374.50",
+   "tax_label": "VAT",
+   "total": "\u00a3447.40"
+  },
+  {
+   "band": "100-plus",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.1,
+   "page": "\u00a3195.13",
+   "subtotal": "\u00a3196.94",
+   "tax": "\u00a339.38",
+   "tax_label": "VAT",
+   "total": "\u00a3236.32"
+  },
+  {
+   "band": "100-plus",
+   "bucket": "higher_at_checkout",
+   "delta_pct": 21.2,
+   "page": "\u00a366.83",
+   "subtotal": "\u00a367.50",
+   "tax": "\u00a313.49",
+   "tax_label": "VAT",
+   "total": "\u00a380.99"
+  }
+ ]
+}
