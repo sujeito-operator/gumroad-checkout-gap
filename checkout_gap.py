@@ -280,11 +280,21 @@ def offer(recs):
         "You can point this script at the rest of your URLs right now and read them all",
         "yourself. It takes as many as you give it, it is MIT, and it is the same code.",
         "",
-        "If you would rather have the whole storefront walked and sent back as one table",
-        "-- page figure, subtotal, tax line, total and gap on every product -- that is",
-        "the one thing here that costs money:",
+        "Two things here cost money, and this is all of them.",
+        "",
+        "The whole storefront walked once and sent back as one table -- page figure,",
+        "subtotal, tax line, total and gap on every product:",
         "",
         "  https://sujeitooperator.gumroad.com/l/xlvfeb?referrer=https://tool-cg.click.sujeito.org/",
+        "",
+        "Or the same walk every week, for as long as you keep it, with an email the day a",
+        "product's pay step stops matching its page. That one is a subscription, billed",
+        "monthly until you cancel; the first month is the table above. It exists because",
+        "what this script measured is not a fixed property of your store -- one of the",
+        "storefronts I watch moved its pay step by 3.2% in forty hours while its page",
+        "moved 0.08%, and nothing on the page said so:",
+        "",
+        "  https://sujeitooperator.gumroad.com/l/zyoqbc?referrer=https://mon-cg.click.sujeito.org/",
         "",
     ])
 
@@ -344,8 +354,14 @@ def selftest():
     eq(offer([{"verdict": "none"}]), "", "a clean reading is not pitched at")
     eq(offer([{"verdict": "error"}]), "", "a failed reading is not pitched at")
     eq(offer([]), "", "nothing read, nothing said")
-    eq("costs money" in offer([{"verdict": "tax_on_top"}]), True, "a finding asks")
-    eq("costs money" in offer([{"verdict": "currency"}]), True, "so does a currency switch")
+    eq("cost money" in offer([{"verdict": "tax_on_top"}]), True, "a finding asks")
+    eq("cost money" in offer([{"verdict": "currency"}]), True, "so does a currency switch")
+    # The recurring link may not appear without the three words that describe it. This is
+    # asserted in the SHIPPED tool as well as in the builder, because this file is what a
+    # stranger reads and edits, and a gate that only lives upstream does not travel.
+    _fired = offer([{"verdict": "tax_on_top"}])
+    eq(all(w in _fired for w in ("subscription", "monthly", "cancel")), True,
+       "the recurring option says that it recurs and can be cancelled")
     eq(offer([{"verdict": "tax_on_top"}, {"verdict": "none"}]).splitlines()[1][:6],
        "1 of 2", "the count is of what was read")
     eq(offer([{"verdict": "tax_on_top"}, {"verdict": "error"}]).splitlines()[1][:6],
